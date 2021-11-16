@@ -1,6 +1,6 @@
 import { BaseModel } from "./BaseModel";
 
-export class Task extends BaseModel {
+export class Todo extends BaseModel {
   text: string;
   completed: boolean;
 
@@ -11,4 +11,4 @@ export class Task extends BaseModel {
   }
 }
 
-export default Task;
+export default Todo;

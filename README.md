@@ -1,4 +1,4 @@
-# first-project
+# todo-project
 
 ## Project setup
 ```
