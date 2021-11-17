@@ -1,6 +1,6 @@
 {
   "name": "typescript-vue-todo",
-  "homepage": "typescript-vue-todo",
+  "homepage": "/typescript-vue-todo/",
   "version": "0.1.0",
   "private": true,
   "scripts": {

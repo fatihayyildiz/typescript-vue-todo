@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: "typescript-vue-todo",
+  publicPath: "/typescript-vue-todo/",
 };
