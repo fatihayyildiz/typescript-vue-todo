@@ -16,8 +16,5 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v2
 
-      - name: Give Permission to run shell
-        run: sudo chown -R $USER:$USER scripts/gh-page-commands.sh
-
       - name: Run deploy script
         run: npm run gh-pages-deploy:linux
