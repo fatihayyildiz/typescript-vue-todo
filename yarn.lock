@@ -978,6 +978,11 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
+"@jamescoyle/vue-icon@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@jamescoyle/vue-icon/-/vue-icon-0.1.2.tgz#b9e254187de6716b81bf9e0e8400ec012231bd05"
+  integrity sha512-KFrImXx5TKIi6iQXlnyLEBl4rNosNKbTeRnr70ucTdUaciVmd9qK9d/pZAaKt1Ob/8xNnX2GMp8LisyHdKtEgw==
+
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.9.0.tgz#79b1bc06fb74a8cfb01cbdedf945584b1b9707f0"
@@ -1125,6 +1130,11 @@
     "@types/istanbul-lib-coverage" "^2.0.0"
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
+
+"@mdi/js@^6.5.95":
+  version "6.5.95"
+  resolved "https://registry.yarnpkg.com/@mdi/js/-/js-6.5.95.tgz#2d895b013408f213252b77c30e0fdaaba6dc8b4b"
+  integrity sha512-x/bwEoAGP+Mo10Dfk5audNIPi7Yz8ZBrILcbXLW3ShOI/njpgodzpgpC2WYK3D2ZSC392peRRemIFb/JsyzzYQ==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"

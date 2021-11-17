@@ -1,3 +1,50 @@
-.new-todo-input{
-  border: 1px solid red;
+@font-face {
+  font-family: Noto Sans SC;
+  src: url("../fonts/NotoSansSC-Regular.otf") format("opentype");
+}
+
+#app{
+  height: 100vh;
+  background-color: #E5E5E5;
+}
+
+
+.todo-main-container{
+  border:1px solid #D0D0D0;
+  padding:0;
+  background-color: white;
+}
+
+.add-todo-input-container{
+  width: 100%;
+  border-bottom: 1px solid #D0D0D0;
+}
+
+.add-todo-icon{
+  padding-left:10px;
+}
+
+.add-todo-input{
+  width: 100%;
+  border:none;
+  padding: 6px;
+  font-size: 28px;
+}
+
+.add-todo-input::placeholder{
+  color: rgba(208,208,208,0.8);
+  font-family: Noto Sans SC, sans-serif;
+}
+
+.add-todo-input:focus-visible{
+  border:none;
+}
+
+.add-todo-input:focus{
+  outline: none;
+}
+
+
+.todo-list-item-container{
+
 }

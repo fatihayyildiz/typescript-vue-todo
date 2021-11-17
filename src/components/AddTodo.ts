@@ -1,5 +1,7 @@
 import { defineComponent } from "vue";
-import Todo from "../models/Todo";
+import Todo from "@/models/Todo";
+import IconBase from "@/components/IconBase.vue";
+import IconDown from "@/assets/icons/IconDown.vue";
 
 export default defineComponent({
   name: "AddTask",
@@ -8,6 +10,10 @@ export default defineComponent({
       taskText: "",
       todos: [] as Todo[],
     };
+  },
+  components: {
+    IconBase,
+    IconDown,
   },
   methods: {
     addTodo(): void {
