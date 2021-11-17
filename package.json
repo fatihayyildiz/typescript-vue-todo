@@ -9,7 +9,8 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
+    "gh-pages-deploy:windows": ".\\scripts\\gh-page-commands.sh",
+    "gh-pages-deploy:linux": "./scripts/gh-page-commands.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
