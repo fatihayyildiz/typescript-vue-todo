@@ -1,4 +1,4 @@
 /* eslint-disable */
-export default {
-  publicPath: "/typescript-vue-todo/",
-};
+module.exports = {
+  publicPath: '/typescript-vue-todo/'
+}
