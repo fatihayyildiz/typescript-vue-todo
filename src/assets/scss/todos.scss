@@ -13,6 +13,7 @@
   border:1px solid #D0D0D0;
   padding:0;
   background-color: white;
+  max-width: 700px;
 }
 
 .add-todo-input-container{
@@ -45,6 +46,98 @@
 }
 
 
-.todo-list-item-container{
 
+.todo-list-container > div:not(:last-child) {
+  border-bottom: 1px solid #D0D0D0;
 }
+
+.todo-list-item-checkbox-wrapper{
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+.todo-list-item-checkbox-label{
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hide the browser's default checkbox */
+.todo-list-item-checkbox-label input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.todo-completed-checkbox{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border: 0.5px solid #D0D0D0;
+  border-radius: 15px;
+  align-self: center;
+}
+
+
+/* On mouse-over, add a grey background color */
+.todo-list-item-checkbox-label:hover input ~ .todo-completed-checkbox {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.todo-list-item-checkbox-label input:checked ~ .todo-completed-checkbox {
+  background-color: white;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.todo-completed-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.todo-list-item-checkbox-label input:checked ~ .todo-completed-checkbox:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.todo-list-item-checkbox-label .todo-completed-checkbox:after {
+  left: 10px;
+  top: 6px;
+  width: 8px;
+  height: 14px;
+  border: solid #2196F3;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.todo-list-item-text{
+  color: black;
+  font-family: Noto Sans SC, sans-serif;
+  font-size: 24px;
+  text-align: left;
+}
+
+.todo-list-item-text.completed{
+  color: rgba(208,208,208,0.8);
+  text-decoration: line-through;
+}
+
+.todo-list-item-delete-icon-wrapper{
+  flex: 1;
+
+  padding-right: 20px;
+  cursor: pointer;
+}
+

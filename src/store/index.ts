@@ -24,10 +24,16 @@ export default createStore({
         updatedAt: new Date(),
         completed: false,
       },
+      {
+        text: "Another todo",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        completed: true,
+      },
     ] as Todo[],
   },
   mutations: {
-    setTodo: (state, todo) => state.todos.push(todo),
+    setTodo: (state, todo) => state.todos.unshift(todo),
   },
   actions: {},
   modules: {},

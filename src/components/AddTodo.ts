@@ -2,6 +2,7 @@ import { defineComponent } from "vue";
 import Todo from "@/models/Todo";
 import IconBase from "@/components/IconBase.vue";
 import IconDown from "@/assets/icons/IconDown.vue";
+import IconClose from "@/assets/icons/IconClose.vue";
 
 export default defineComponent({
   name: "AddTask",
@@ -14,6 +15,7 @@ export default defineComponent({
   components: {
     IconBase,
     IconDown,
+    IconClose,
   },
   methods: {
     addTodo(): void {
