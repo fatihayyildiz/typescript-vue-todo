@@ -141,3 +141,31 @@
   cursor: pointer;
 }
 
+
+.items-left-text{
+  color: rgba(128, 128, 128, 0.9);
+  font-family: Noto Sans SC, sans-serif;
+  font-size: 12px;
+}
+
+.clear-completed{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.list-type-button{
+  padding:1px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.list-type-button.active{
+  border: 1px solid rgba(208,208,208,0.5);
+}
+
+.list-type-button span{
+  color: rgba(128, 128, 128, 0.9);
+  font-family: Noto Sans SC, sans-serif;
+  font-size: 12px;
+}
+

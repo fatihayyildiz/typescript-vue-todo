@@ -23,17 +23,25 @@ export default createStore({
         createdAt: new Date(),
         updatedAt: new Date(),
         completed: false,
+        visible: true,
       },
       {
         text: "Another todo",
         createdAt: new Date(),
         updatedAt: new Date(),
         completed: true,
+        visible: true,
       },
     ] as Todo[],
   },
   mutations: {
-    setTodo: (state, todo) => state.todos.unshift(todo),
+    setTodo: (state, todo) => {
+      state.todos.unshift(todo);
+    },
+    deleteTodo(state, todo) {
+      const todoIndex = state.todos.findIndex((td) => td.text === todo.text);
+      state.todos.splice(todoIndex, 1);
+    },
   },
   actions: {},
   modules: {},

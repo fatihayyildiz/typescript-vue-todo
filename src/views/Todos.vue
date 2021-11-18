@@ -28,12 +28,12 @@
           <transition-group name="todo-list" mode="in-out">
             <div
               class="d-flex no-gutters"
-              v-for="task in todos"
-              :key="task.text"
+              v-for="todo in filteredTodos"
+              :key="todo.text"
             >
               <div class="todo-list-item-checkbox-wrapper">
                 <label class="todo-list-item-checkbox-label">
-                  <input type="checkbox" v-model="task.completed" />
+                  <input type="checkbox" v-model="todo.completed" />
                   <span class="todo-completed-checkbox"></span>
                 </label>
               </div>
@@ -41,8 +41,8 @@
               <div class="d-flex justify-content-start align-items-center">
                 <span
                   class="todo-list-item-text"
-                  :class="{ completed: task.completed }"
-                  >{{ task.text }}</span
+                  :class="{ completed: todo.completed }"
+                  >{{ todo.text }}</span
                 >
               </div>
               <div
@@ -52,6 +52,7 @@
                   align-items-center align-content-end
                   todo-list-item-delete-icon-wrapper
                 "
+                @click="deleteTodo(todo)"
               >
                 <icon-base
                   icon-name="close"
@@ -63,10 +64,43 @@
               </div>
             </div>
           </transition-group>
-          <div class="d-flex">
-            <div class="p-2">Flex item</div>
-            <div class="p-2">Flex item</div>
-            <div class="ml-auto p-2">Flex item</div>
+          <div class="d-flex justify-content-between">
+            <div class="p-2">
+              <span class="items-left-text"
+                >{{ todos?.filter((td) => !td.completed).length }} items
+                left</span
+              >
+            </div>
+            <div
+              class="d-flex flex-row justify-content-between align-items-center"
+            >
+              <div
+                class="list-type-button"
+                :class="{ active: activeView === 'All' }"
+                @click="setActiveView('All')"
+              >
+                <span>All</span>
+              </div>
+              <div
+                class="list-type-button"
+                :class="{ active: activeView === 'Active' }"
+                @click="setActiveView('Active')"
+              >
+                <span>Active</span>
+              </div>
+              <div
+                class="list-type-button"
+                :class="{ active: activeView === 'Completed' }"
+                @click="setActiveView('Completed')"
+              >
+                <span>Completed</span>
+              </div>
+            </div>
+            <div class="ml-auto p-2" @click="clearCompletedTodos()">
+              <span class="items-left-text clear-completed"
+                >Clear Completed</span
+              >
+            </div>
           </div>
         </div>
       </div>

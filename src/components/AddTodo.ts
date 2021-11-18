@@ -10,6 +10,7 @@ export default defineComponent({
     return {
       taskText: "",
       todos: [] as Todo[],
+      activeView: "All",
     };
   },
   components: {
@@ -25,11 +26,29 @@ export default defineComponent({
         this.taskText = "";
       }
     },
-    setTaskComplete(task: Todo): void {
+    setTodoComplete(task: Todo): void {
       this.$store.commit("completeTask", task);
     },
-    deleteTask(task: Todo) {
-      this.$store.commit("deleteTask", task);
+    deleteTodo(task: Todo) {
+      this.$store.commit("deleteTodo", task);
+    },
+    clearCompletedTodos(): void {
+      this.$store.state.todos
+        .filter((td) => td.completed)
+        .map((willRemove) => this.$store.commit("deleteTodo", willRemove));
+    },
+    setActiveView(activeView: string): void {
+      this.activeView = activeView;
+    },
+  },
+  computed: {
+    filteredTodos(): Todo[] {
+      return this.$store.state.todos.filter((td) => {
+        if (this.activeView === "Active") return !td.completed && td.visible;
+        else if (this.activeView === "Completed")
+          return td.completed && td.visible;
+        else return td.visible;
+      });
     },
   },
   mounted() {
