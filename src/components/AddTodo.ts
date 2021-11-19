@@ -3,6 +3,7 @@ import Todo from "@/models/Todo";
 import IconBase from "@/components/IconBase.vue";
 import IconDown from "@/assets/icons/IconDown.vue";
 import IconClose from "@/assets/icons/IconClose.vue";
+import { VIEW_TYPES } from "@/store";
 
 export default defineComponent({
   name: "AddTask",
@@ -10,7 +11,7 @@ export default defineComponent({
     return {
       taskText: "",
       todos: [] as Todo[],
-      activeView: "All",
+      activeView: "",
     };
   },
   components: {
@@ -37,8 +38,8 @@ export default defineComponent({
         .filter((td) => td.completed)
         .map((willRemove) => this.$store.commit("deleteTodo", willRemove));
     },
-    setActiveView(activeView: string): void {
-      this.activeView = activeView;
+    setActiveView(activeView: VIEW_TYPES): void {
+      this.$store.commit("setActiveView", activeView);
     },
   },
   computed: {
@@ -53,5 +54,6 @@ export default defineComponent({
   },
   mounted() {
     this.todos = this.$store.state.todos;
+    this.activeView = this.$store.state.activeView;
   },
 });

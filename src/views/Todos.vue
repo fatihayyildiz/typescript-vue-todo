@@ -76,22 +76,22 @@
             >
               <div
                 class="list-type-button"
-                :class="{ active: activeView === 'All' }"
-                @click="setActiveView('All')"
+                :class="{ active: activeView === VIEW_TYPES.All }"
+                @click="setActiveView(VIEW_TYPES.All)"
               >
                 <span>All</span>
               </div>
               <div
                 class="list-type-button"
-                :class="{ active: activeView === 'Active' }"
-                @click="setActiveView('Active')"
+                :class="{ active: activeView === VIEW_TYPES.Active }"
+                @click="setActiveView(VIEW_TYPES.Active)"
               >
                 <span>Active</span>
               </div>
               <div
                 class="list-type-button"
-                :class="{ active: activeView === 'Completed' }"
-                @click="setActiveView('Completed')"
+                :class="{ active: activeView === VIEW_TYPES.Completed }"
+                @click="setActiveView(VIEW_TYPES.Completed)"
               >
                 <span>Completed</span>
               </div>
@@ -108,4 +108,6 @@
   </div>
 </template>
 
-<script lang="ts" src="../components/AddTodo.ts"></script>
+<script lang="ts" src="../components/AddTodo.ts">
+import { VIEW_TYPES } from "@/store";
+</script>
