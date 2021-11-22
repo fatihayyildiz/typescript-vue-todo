@@ -1,11 +1,11 @@
 export class BaseModel {
   constructor() {
-    this.createdAt = new Date();
-    this.updatedAt = new Date();
+    this.createDateTime = new Date();
+    this.lastChangedDateTime = new Date();
   }
 
-  createdAt: Date;
-  updatedAt: Date;
+  createDateTime: Date;
+  lastChangedDateTime: Date;
 }
 
 export default BaseModel;

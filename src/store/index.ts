@@ -20,17 +20,17 @@ export default createStore({
     todos: [
       {
         text: "Mock todo",
-        createdAt: new Date(),
-        updatedAt: new Date(),
+        createDateTime: new Date(),
+        lastChangedDateTime: new Date(),
         completed: false,
-        visible: true,
+        isActive: true,
       },
       {
         text: "Another todo",
-        createdAt: new Date(),
-        updatedAt: new Date(),
+        createDateTime: new Date(),
+        lastChangedDateTime: new Date(),
         completed: true,
-        visible: true,
+        isActive: true,
       },
     ] as Todo[],
   },

@@ -1,15 +1,17 @@
 import { BaseModel } from "./BaseModel";
 
 export class Todo extends BaseModel {
+  id: number;
   text: string;
   completed: boolean;
-  visible: boolean;
+  isActive: boolean;
 
   constructor(text: string) {
     super();
+    this.id = 0;
     this.text = text;
     this.completed = false;
-    this.visible = true;
+    this.isActive = true;
   }
 }
 
