@@ -34,7 +34,7 @@
       <li>Using cookies</li>
     </ul>
     <h3>Ecosystem</h3>
-    <ul>
+    <ul class="ecosystem-list">
       <li>
         <a href="https://router.vuejs.org" target="_blank" rel="noopener"
           >vue-router</a
@@ -92,7 +92,7 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 h3 {
-  margin: 40px 0 0;
+  margin: 20px 0 0;
 }
 
 ul {
@@ -103,6 +103,10 @@ ul {
 li {
   display: block;
   margin: 0 10px;
+}
+
+.ecosystem-list li {
+  display: inline-block;
 }
 
 a {
